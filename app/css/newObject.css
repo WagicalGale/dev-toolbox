@@ -18,6 +18,15 @@ body * {
   margin: 0px;
 }
 
+textarea {
+  resize: none;
+  width: 100%;
+  margin-top: 5px;
+  outline: 0;
+  border: solid 1px #E5E5E5;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;

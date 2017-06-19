@@ -13,14 +13,28 @@
 
         <div id="main-body">
           <div id="inputarea">
+            <p>Object Type:</p>
             <select class="object-type">
               <option value="colour">Colour</option>
               <option value="colour-palette">Colour Palette</option>
               <option value="code-block">Code</option>
             </select>
+
+            <p>Object Name:</p>
+            <textarea class="object-name" rows="1" maxlength="20"></textarea>
+
+            <p>Colour:</p>
+            <input type="color" class="object-value" />
+
+            <p>Description:</p>
+            <textarea class="object-desc" rows="2"></textarea>
+
+            <button class="create-object">Create Object</button>
           </div>
         </div>
       </div>
     </div>
   </body>
+
+  <script src="js/newObject.js"></script>
 </html>
