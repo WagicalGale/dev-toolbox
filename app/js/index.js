@@ -8,3 +8,8 @@ var path = path.join(appdata, 'userdata.json');
 var data = getDataFile(path);
 
 generateObjects(data);
+
+var newObjectButton = document.querySelector('.newobject');
+newObjectButton.addEventListener('click', function() {
+  ipcRenderer.send('open-new-object');
+});
