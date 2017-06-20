@@ -25,7 +25,7 @@ ipcMain.on('open-new-object', function() {
   if (newObjectWindow) return;
 
   newObjectWindow = new BrowserWindow({
-    height: 350,
+    height: 500,
     width: 400,
     resizable: false
   });
@@ -37,4 +37,9 @@ ipcMain.on('open-new-object', function() {
   newObjectWindow.on('close', function() {
     newObjectWindow = null;
   })
+})
+
+ipcMain.on('object-created', function(event) {
+  mainWindow.webContents.send('refresh-objects');
+  newObjectWindow.close();
 })

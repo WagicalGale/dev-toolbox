@@ -93,6 +93,6 @@ textarea {
   padding: 10px;
 }
 
-.object-type, .object-name, .object-value, .object-desc {
+.object-type, .object-name, .colour-id, .object-desc {
   margin-bottom: 10px;
 }

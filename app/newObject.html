@@ -3,6 +3,7 @@
     <title>New Object</title>
 
     <link rel="stylesheet" type="text/css" href="css/newObject.css" />
+    <link rel="stylesheet" type="text/css" href="css/simple-color-picker.css" />
   </head>
   <body>
     <div id="wrapper">
@@ -25,9 +26,10 @@
 
             <div id="type-options">
               <p>Colour:</p>
-              <input type="color" class="object-value" />
+              <div id="colour-selector"></div>
+              <textarea class="colour-id" maxlength="7" rows="1">#FFFFFF</textarea>
 
-              <p>Description:</p>
+              <p>Description (optional):</p>
               <textarea class="object-desc" rows="2"></textarea>
             </div>
 
@@ -39,5 +41,7 @@
   </body>
 
   <script src="js/newObjectForm.js"></script>
+  <script src="js/datatools.js"></script>
+  <script src="js/createObject.js"></script>
   <script src="js/newObject.js"></script>
 </html>
