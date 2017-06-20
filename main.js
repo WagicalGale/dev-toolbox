@@ -27,10 +27,14 @@ ipcMain.on('open-new-object', function() {
   newObjectWindow = new BrowserWindow({
     height: 300,
     width: 400,
-    resizable: false
+    resizable: true //temp
   });
 
   newObjectWindow.loadURL('file://' + __dirname + '/app/newObject.html');
   newObjectWindow.setMenu(null);
-  //newObjectWindow.webContents.openDevTools(); //temp
+  newObjectWindow.webContents.openDevTools(); //temp
+
+  newObjectWindow.on('close', function() {
+    newObjectWindow = null;
+  })
 })

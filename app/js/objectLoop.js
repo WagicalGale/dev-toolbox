@@ -1,4 +1,10 @@
 function generateObjects(data) {
+  var objects = document.getElementById('objects');
+
+  while (objects.hasChildNodes()) {
+    objects.removeChild(objects.lastChild);
+  }
+
   for (i = 0; i < data.objects.length; i++) {
     if (data.objects[i].type == "Colour") {
       //Create the object
@@ -19,7 +25,7 @@ function generateObjects(data) {
       //Stick it all together
       objectElement.appendChild(titleElement);
       objectElement.appendChild(colourPreviewElement);
-      document.getElementById('sidebar').appendChild(objectElement);
+      objects.appendChild(objectElement);
     }
 
     else if (data.objects[i].type == "Colour Palette") {
@@ -42,7 +48,7 @@ function generateObjects(data) {
       //Stick it all together
       objectElement.appendChild(titleElement);
       objectElement.appendChild(objectTypeElement);
-      document.getElementById('sidebar').appendChild(objectElement);
+      objects.appendChild(objectElement);
     }
   }
 }

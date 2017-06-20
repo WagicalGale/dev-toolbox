@@ -1,10 +1,11 @@
 function getDataFile(path) {
   // Creates userdata file if needed
   if (!fs.existsSync(path)) {
-    fs.writeFileSync(path, '{"settings": {}, "objects": {}}');
+    fs.writeFileSync(path, '{"settings": {}, "objects": []}');
     console.log(`Created file ${path}`);
   }
   var data = JSON.parse(fs.readFileSync(path, "utf8"));
+  saveDataFile(data, path);
   return(data)
 }
 
