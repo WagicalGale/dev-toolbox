@@ -92,3 +92,7 @@ textarea {
 #main-body {
   padding: 10px;
 }
+
+.object-type, .object-name, .object-value, .object-desc {
+  margin-bottom: 10px;
+}
