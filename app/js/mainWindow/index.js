@@ -1,8 +1,4 @@
-var electron = require('electron');
-var {ipcRenderer} = electron;
-
 var data = getDataFile();
-
 generateObjects(data);
 
 var newObjectButton = document.querySelector('.newobject');
@@ -15,8 +11,13 @@ ipcRenderer.on('refresh-objects', function() {
   generateObjects(data);
 })
 
-$('.object').click(function() {
+$(document).on('click', '.object', function() {
+  var data = getDataFile();
   var key = Number($(this).attr("id"));
-  var object = data.objects[key];
-  displayObject(object);
+  selectedobject = data.objects[key];
+  displayObject(selectedobject);
+})
+
+$(document).on('click', '.delete-object', function() {
+  deleteObject(selectedobject);
 })

@@ -18,6 +18,14 @@ body * {
   margin: 0px;
 }
 
+textarea {
+  resize: none;
+  margin-top: 5px;
+  outline: 0;
+  border: solid 1px #E5E5E5;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
@@ -143,6 +151,7 @@ body * {
   height: calc(100% - 60px);
   width: 100%;
   -webkit-box-sizing: border-box;
+  position: relative;
 }
 
 .colour-display {
@@ -150,18 +159,25 @@ body * {
   height: 200px;
   background-color: white;
   float: left;
+  margin-right: 10px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,30.75);
 }
 .object-title {
-
+  -webkit-user-select: none;
 }
 .colour-input {
-
+  float: left;
 }
 .object-desc {
-
+  margin-top: 10px;
+  clear: both;
+  -webkit-user-select: none;
 }
 .delete-object {
-
+  float: right;
+  margin-right: 10px;
+  margin-top: 3px;
+  -webkit-user-select: none;
 }
 
 #bottombar {
@@ -176,4 +192,5 @@ body * {
 #settings-button {
   margin-top: 3px;
   margin-left: 10px;
+  -webkit-user-select: none;
 }

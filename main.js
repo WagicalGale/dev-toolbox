@@ -9,10 +9,10 @@ var newObjectWindow = null;
 app.on('ready', function() {
     mainWindow = new BrowserWindow({
       height: 600,
-      width: 800
+      width: 800,
+      resizable: false
     });
 
-    mainWindow.maximize();
     mainWindow.loadURL('file://' + __dirname + '/app/index.html');
     mainWindow.setMenu(null);
     mainWindow.webContents.openDevTools(); //temp

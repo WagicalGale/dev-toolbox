@@ -27,6 +27,11 @@ textarea {
   -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
 }
 
+p, button {
+  -webkit-user-select: none;
+  cursor: default;
+}
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;

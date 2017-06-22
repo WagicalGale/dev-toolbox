@@ -1,6 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 var electron = require('electron');
+var {ipcRenderer} = electron;
 var $ = require('jquery');
 
 var appdata = (electron.app || electron.remote.app).getPath('userData');
@@ -20,4 +21,8 @@ function saveDataFile(data) {
   fs.writeFileSync(path, JSON.stringify(data, null, 2), function(err) {
     if (err) console.error(err);
   })
+}
+
+function deleteObject(object) {
+  //Delete object
 }

@@ -23,7 +23,8 @@ function createColourPaletteObject(name, desc) {
   data.objects.push({
     "type": "Colour Palette",
     "name": name,
-    "desc": desc
+    "desc": desc,
+    "value": null
   })
 
   saveDataFile(data);
@@ -38,7 +39,8 @@ function createCodeObject(name, desc) {
   data.objects.push({
     "type": "Code",
     "name": name,
-    "desc": desc
+    "desc": desc,
+    "value": null
   });
 
   saveDataFile(data);
