@@ -145,6 +145,25 @@ body * {
   -webkit-box-sizing: border-box;
 }
 
+.colour-display {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  float: left;
+}
+.object-title {
+
+}
+.colour-input {
+
+}
+.object-desc {
+
+}
+.delete-object {
+
+}
+
 #bottombar {
   height: 30px;
   width: 100%;

@@ -12,6 +12,7 @@ app.on('ready', function() {
       width: 800
     });
 
+    mainWindow.maximize();
     mainWindow.loadURL('file://' + __dirname + '/app/index.html');
     mainWindow.setMenu(null);
     mainWindow.webContents.openDevTools(); //temp

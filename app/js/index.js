@@ -18,5 +18,5 @@ ipcRenderer.on('refresh-objects', function() {
 $('.object').click(function() {
   var key = Number($(this).attr("id"));
   var object = data.objects[key];
-  
+  displayObject(object);
 })
