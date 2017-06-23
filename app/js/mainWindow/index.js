@@ -13,11 +13,12 @@ ipcRenderer.on('refresh-objects', function() {
 
 $(document).on('click', '.object', function() {
   var data = getDataFile();
-  var key = Number($(this).attr("id"));
-  selectedobject = data.objects[key];
+  selectedkey = Number($(this).attr("id"));
+  var selectedobject = data.objects[selectedkey];
   displayObject(selectedobject);
 })
 
 $(document).on('click', '.delete-object', function() {
-  deleteObject(selectedobject);
+  deleteObject(selectedkey);
+  selectedkey = null;
 })

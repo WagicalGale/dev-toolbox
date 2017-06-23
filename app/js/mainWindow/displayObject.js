@@ -22,6 +22,7 @@ function displayObject(object) {
       break;
 
     case "Colour Palette":
+      switchPalette(description, value);
       break;
 
     case "Code":
@@ -69,4 +70,15 @@ function switchColour(name, description, value) {
   $(".colour-input").focus(function() {
     $(this).select();
   })
+}
+
+function switchPalette(description, value) {
+  var displayArea = document.getElementById('main-body');
+
+  var objectDescription = document.createElement('p');
+  var objectDescriptionText = document.createTextNode(description);
+  objectDescription.className = "object-desc";
+  objectDescription.appendChild(objectDescriptionText);
+
+  displayArea.appendChild(objectDescription);
 }

@@ -160,24 +160,27 @@ textarea {
   background-color: white;
   float: left;
   margin-right: 10px;
+  margin-bottom: 10px;
   -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,30.75);
 }
-.object-title {
+.object-name {
   -webkit-user-select: none;
+  cursor: default;
 }
 .colour-input {
   float: left;
 }
 .object-desc {
-  margin-top: 10px;
   clear: both;
   -webkit-user-select: none;
+  cursor: default;
 }
 .delete-object {
   float: right;
   margin-right: 10px;
   margin-top: 3px;
   -webkit-user-select: none;
+  cursor: pointer;
 }
 
 #bottombar {
