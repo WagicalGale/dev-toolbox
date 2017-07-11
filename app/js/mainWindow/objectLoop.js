@@ -20,7 +20,8 @@ function generateObjects(data) {
     if (data.objects[i].type == "Colour") {
       //Create the COLOUR preview
       var colourPreviewElement = document.createElement("div");
-      colourPreviewElement.className = "colour-preview"
+      colourPreviewElement.className = "colour-preview";
+      colourPreviewElement.id = "preview-" + i;
       colourPreviewElement.style.backgroundColor = data.objects[i].value;
 
       //Stick it all together

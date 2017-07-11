@@ -1,4 +1,5 @@
 var data = getDataFile();
+var selectedkey;
 generateObjects(data);
 
 $(document).on('click', '.newobject', function() {
@@ -20,4 +21,14 @@ $(document).on('click', '.object', function() {
 $(document).on('click', '.delete-object', function() {
   deleteObject(selectedkey);
   selectedkey = null;
+})
+
+$(document).on('change', '.colour-input', function() {
+  if ($(this).val().length == 7) {
+    var newColour = $(this).val();
+    data.objects[selectedkey].value = $(this).val();
+    saveDataFile(data);
+    $('.colour-display').css('backgroundColor', newColour);
+    document.getElementById("preview-" + selectedkey).style.backgroundColor = newColour;
+  }
 })
