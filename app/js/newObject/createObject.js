@@ -24,7 +24,7 @@ function createColourPaletteObject(name, desc) {
     "type": "Colour Palette",
     "name": name,
     "desc": desc,
-    "value": null
+    "value": {}
   })
 
   saveDataFile(data);

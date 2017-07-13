@@ -81,4 +81,28 @@ function switchPalette(description, value) {
   objectDescription.appendChild(objectDescriptionText);
 
   displayArea.appendChild(objectDescription);
+
+  for (i = 0; i < value.length; i++) {
+    //Create the object
+    var objectElement = document.createElement("div");
+    objectElement.className = "palette-object";
+    objectElement.id = "palette-" + i;
+
+    //Create the title
+    var titleElement = document.createElement("p");
+    var titleText = document.createTextNode(value[i].name);
+    titleElement.className = "object-title";
+    titleElement.appendChild(titleText);
+
+    //Create the COLOUR preview
+    var colourPreviewElement = document.createElement("div");
+    colourPreviewElement.className = "colour-preview";
+    colourPreviewElement.id = "palette-preview-" + i;
+    colourPreviewElement.style.backgroundColor = value[i].value;
+
+    //Stick it all together
+    objectElement.appendChild(titleElement);
+    objectElement.appendChild(colourPreviewElement);
+    displayArea.appendChild(objectElement);
+  }
 }

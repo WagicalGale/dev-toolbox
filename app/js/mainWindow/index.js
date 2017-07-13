@@ -18,6 +18,15 @@ $(document).on('click', '.object', function() {
   displayObject(selectedobject);
 })
 
+$(document).on('click', '.palette-object', function() {
+  var data = getDataFile();
+  var thisid = $(this).attr("id");
+  var numid = Number(thisid.split('palette-')[1]);
+  var selectedobject = data.objects[selectedkey].value[numid];
+  console.log(selectedobject, thisid, numid);
+  displayObject(selectedobject);
+})
+
 $(document).on('click', '.delete-object', function() {
   deleteObject(selectedkey);
   selectedkey = null;
